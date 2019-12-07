@@ -15,7 +15,10 @@
         alert("Gross is Required.");
         return false;
     }
-    
+    if(/[^0-9]/.test(b)) {
+		alert("Gross has to be a number.");
+		return false;
+	}
     var c = document.forms["form"]["dateOfLaunch"].value;
     if(c=="") {
         alert("Date of Launch is required.");
