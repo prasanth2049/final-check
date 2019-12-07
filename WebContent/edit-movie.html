@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+     <title> Movie List Admin</title>
+     <link rel="stylesheet" type="text/CSS" href="./style/style.css" />
+	 <script src="./js/script.js" type="text/javascript"></script>
+     </head>
+                
+    <body>
+     <header>
+     <span id="head" >Movie Cruiser </span>
+     <img src="./images/logo.png" />
+     <a id="movies" href="movie-list-customer.html">Movies</a>
+     </header>
+                                
+    <div>
+     <h2 class="cont" >Edit Movie</h2>                                                    
+     <table class="cont" >
+	 <form name="form" method="post" onsubmit="return validation()" action="edit-movie-status.html">
+     <table id="margin">
+     <tr>
+     <td>Title<td>
+     </tr>
+     <tr>
+     <td colspan="4"><label><input value="Avengers-End Game" type="text" name="title" class="full"></label></td>
+     </tr>
+     <tr>
+     <td>Gross($)</td>
+     <td>Active</td>
+     <td>Date of Launch</td>
+     <td>Genre</td>
+     </tr>
+     <tr>
+     <td><input type="text" class="al-right" name="Gross($)" value="2787965087"></td>
+     <td><label for="Yes">
+     <input type="radio" id="Yes" name="inStock" checked >
+     <label for="Yes">Yes</label>
+     <input type="radio" id="No" name="inStock">
+     <label for="NO">No</label><br/></label></td>
+     <td><input type="text" id="dol" name="dateOfLaunch" value= "27/04/2022"></td>
+     <td><select name="Genre" id="Genre">
+     <option value="Science Fiction">Science Fiction</option>
+     <option value="Superhero" selected>Superhero<option>
+     <option value="Romance">Romance</option>
+     <option value="adventure">adventure</option>
+     <option value="Thriller">Thriller</option>
+     </select></td>
+     </tr>
+     <tr>
+     <td><label for="Has Teaser"><input type="checkbox" id="Has Teaser" name="Has Teaser" value="Has Teaser" checked >Has Teaser</label>
+     </tr>
+     <tr>
+     <td><input type="submit" class="button" value="Save"></td>
+     </tr>
+     </table>
+     </form>
+	 </div>
+					 
+	<footer><span class="cont" >Copyright@2019</span></footer>
+                                
+    </body>
+</html>
