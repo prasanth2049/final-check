@@ -43,7 +43,7 @@ public class ShowEditMovieServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("edit-movie.jsp");
 			rd.forward(request, response);
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 
 	}

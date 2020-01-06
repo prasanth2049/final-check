@@ -41,7 +41,7 @@ public class ShowMovieListCustomerServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("movie-list-customer.jsp");
 			rd.forward(request, response);
 		} catch (Exception ex) {
-			System.out.println(ex);
+			ex.printStackTrace();
 		}
 	}
 

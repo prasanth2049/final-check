@@ -52,7 +52,7 @@ public class AddTofavoriteServlet extends HttpServlet {
 			rd.forward(request, response);
 
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 
 	}

@@ -59,7 +59,7 @@ public class EditMovieServlet extends HttpServlet {
 			rd.forward(request, response);
 
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 	}
 
