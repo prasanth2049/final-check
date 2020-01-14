@@ -12,7 +12,20 @@ VALUE
 (4, 'Jurassic World',1671713208,'No','2017-07-02','Science Fiction','Yes'),
 (5, 'Avengers: End Game',2750760348,'Yes','2022-11-02','Superhero','Yes');
 
-select * from movie;
+
+-----------------------------------------------------------------------
+-- display movie list -------------------------------------------------
+-----------------------------------------------------------------------
+
+select 
+m_title as Title,
+m_boxoffice as Boxoffice,
+m_active as Active,
+m_date_of_launch as Date_of_launch,
+m_genre as genre,
+m_has_teaser as Has_teaser
+from movie;
+
 
 -----------------------------------------------------------------------
 ----------- Update movie in movie table -------------------------------
@@ -26,7 +39,7 @@ WHERE m_id=1;
 -------- Displaying customer list -------------------------------------
 -----------------------------------------------------------------------
 
-select m_title,m_has_teaser,m_box_office,m_genre from movie
+select m_title,m_has_teaser,m_boxoffice,m_genre from movie
 where m_active='Yes' and m_date_of_launch <= current_date();
 
 ------------------------------------------------------------------------
@@ -37,7 +50,15 @@ where m_active='Yes' and m_date_of_launch <= current_date();
 insert into user value(1,'prasanth204'),
 (2,'user203');
 
-select * from user;
+-------------------------------------------------------------------------
+-- display user list ----------------------------------------------------
+-------------------------------------------------------------------------
+
+
+select 
+us_id as User_Id,
+us_name as User_Name
+ from user;
 
 -------------------------------------------------------------------------
 -- insert value in favorite --------------------------------------------------------
@@ -66,7 +87,11 @@ where ft_us_id=1;
 -- view favorite ----------------------------------------------------------
 ---------------------------------------------------------------------------
 
-select * from favorite;
+select 
+ft_id as ft_id,
+ft_us_id as ft_user_id,
+ft_pr_id as ft_pr_id
+ from favorite;
 
 
 ----------------------------------------------------------------------------
@@ -86,7 +111,7 @@ where ft_us_id=1;
 
 
 ----------------------------------------------------------------------------
--- view favorite after delete ----------------------------------------------
+-- view no of favorite after delete ----------------------------------------------
 ----------------------------------------------------------------------------
 
 select count(m_title) as No_of_favorite from movie
