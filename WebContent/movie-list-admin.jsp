@@ -34,7 +34,7 @@
 							value="${movie.boxOffice}" var="formatNumber" />${formatNumber}</td>
 					<td class="title-txt"><c:if test="${movie.active}">Yes</c:if>
 						<c:if test="${!movie.active}">No</c:if></td>
-
+`	
 					<td class="title-text"><fmt:formatDate pattern="dd/MM/yyyy"
 							value="${movie.dateOfLaunch}" /></td>
 

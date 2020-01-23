@@ -125,7 +125,7 @@ where ft_us_id=1;
 ----------------------------------------------------------------------------
 
 
-delete from favorite;
+delete from favorite;menu_item
 
 
 

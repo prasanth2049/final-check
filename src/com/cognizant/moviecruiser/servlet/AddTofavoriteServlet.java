@@ -14,6 +14,7 @@ import com.cognizant.moviecruiser.dao.FavoriteDao;
 import com.cognizant.moviecruiser.dao.FavoriteDaoCollectionImpl;
 import com.cognizant.moviecruiser.dao.MovieDao;
 import com.cognizant.moviecruiser.dao.MovieDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.MovieDaoSqlImpl;
 import com.cognizant.moviecruiser.model.Movie;
 
 /**
@@ -42,7 +43,7 @@ public class AddTofavoriteServlet extends HttpServlet {
 			FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
 			favoriteDao.addFavorite(userId, movieId);
 
-			MovieDao movieDao = new MovieDaoCollectionImpl();
+			MovieDao movieDao = new MovieDaoSqlImpl();
 			List<Movie> movieListCustomer = movieDao.getMovieListCustomer();
 
 			request.setAttribute("movieList", movieListCustomer);
